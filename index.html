@@ -28,7 +28,6 @@
     color: var(--text);
     min-height: 100vh;
     padding: 2rem 1.2rem 4rem;
-    padding-top: 210px;
   }
 
   /* ── STEP INDICATOR ── */
@@ -545,7 +544,7 @@
   .page.active { display: block; }
 
   @media (max-width: 480px) {
-    body { padding: 1.2rem .8rem 3rem; padding-top: 215px; }
+    body { padding: 1.2rem .8rem 3rem; }
     .card { padding: 1.2rem 1rem; }
     .step-label { display: none; }
   }
@@ -554,8 +553,7 @@
 
   /* ── NAVBAR ── */
   .navbar {
-    position: fixed;
-    top: 0; left: 0; right: 0;
+    position: relative;
     z-index: 1000;
     background: #ffffff;
     box-shadow: 0 1px 3px 0 rgba(0,0,0,.12);
