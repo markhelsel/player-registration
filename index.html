@@ -27,6 +27,9 @@
     background: var(--light);
     color: var(--text);
     min-height: 100vh;
+  }
+
+  .page-wrap {
     padding: 2rem 1.2rem 4rem;
   }
 
@@ -544,7 +547,7 @@
   .page.active { display: block; }
 
   @media (max-width: 480px) {
-    body { padding: 1.2rem .8rem 3rem; }
+    .page-wrap { padding: 1.2rem .8rem 3rem; }
     .card { padding: 1.2rem 1rem; }
     .step-label { display: none; }
   }
@@ -825,7 +828,7 @@
   </ul>
 </div>
 
-
+<div class="page-wrap">
 
 <div class="steps-wrap">
   <div class="steps">
@@ -1138,6 +1141,8 @@
   </div>
 
 </div><!-- /main -->
+
+</div><!-- /page-wrap -->
 
 <script>
 const API_BASE = 'https://team.ambassadorsbaseballus.com';
