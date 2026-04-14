@@ -919,20 +919,6 @@
         <div id="team-error" style="display:none;color:#c8102e;font-size:.82rem;margin-top:.4rem;">Team not found. Please check your link.</div>
       </div>
 
-      <!-- Fee (always visible) -->
-      <div id="fee-display" style="margin-bottom:.3rem">
-        <div class="field">
-          <label>Player Fee Amount</label>
-          <div class="fee-box fee-box--empty fee-placeholder" id="fee-box" style="margin-top:.2rem">
-            <div>
-              <div class="fee-box-label" id="fee-label">Loading fee…</div>
-              <div class="fee-box-amount" id="fee-amount" style="font-size:1rem;opacity:.4;font-weight:400;letter-spacing:0">—</div>
-            </div>
-            <div class="fee-box-type" id="fee-type-badge" style="opacity:.3">—</div>
-          </div>
-        </div>
-      </div>
-
       <div class="ack-block">
         <div class="ack-text">I understand that player fees are <strong>non-refundable.</strong></div>
         <div class="radio-group">
@@ -957,9 +943,9 @@
         </div>
       </div>
 
-      <div class="sub-divider">Injury Protection Plan</div>
+      <div class="sub-divider" style="display:none">Injury Protection Plan</div>
 
-      <div class="ack-block">
+      <div class="ack-block" style="display:none">
         <div class="ack-text">I would like to add <strong>Injury Protection</strong> (<a href="https://assets.cdn.filesafe.space/Uk08wbmGq0zso8XE0luB/media/69d6486be033d6ce582fceba.pdf" target="_blank">see here</a>).</div>
         <div class="radio-group">
           <div class="radio-item"><input type="radio" name="ack4" id="ack4-yes" value="yes"><label for="ack4-yes">Yes</label></div>
@@ -967,7 +953,7 @@
         </div>
       </div>
 
-      <div class="ack-block">
+      <div class="ack-block" style="display:none">
         <div class="ack-text">I decline the Injury Protection Plan.</div>
         <div class="radio-group">
           <div class="radio-item"><input type="radio" name="ack5" id="ack5-yes" value="yes"><label for="ack5-yes">Yes</label></div>
@@ -1096,6 +1082,20 @@
       <div class="field">
         <label>High School (current or will attend) <span class="req">★</span></label>
         <input type="text" id="high-school" placeholder="School name">
+      </div>
+    </div>
+
+    <!-- Fee (always visible) -->
+    <div id="fee-display" style="margin-bottom:.3rem">
+      <div class="field">
+        <label>Player Fee Amount</label>
+        <div class="fee-box fee-box--empty fee-placeholder" id="fee-box" style="margin-top:.2rem">
+          <div>
+            <div class="fee-box-label" id="fee-label">Loading fee…</div>
+            <div class="fee-box-amount" id="fee-amount" style="font-size:1rem;opacity:.4;font-weight:400;letter-spacing:0">—</div>
+          </div>
+          <div class="fee-box-type" id="fee-type-badge" style="opacity:.3">—</div>
+        </div>
       </div>
     </div>
 
