@@ -1202,7 +1202,7 @@ let allTeams = [];
         : (rawHash ? decodeURIComponent(rawHash) : '');
 
     if (slug) {
-      const normalize = str => str.replace(/[-\s\/]+/g, '').toLowerCase();
+      const normalize = str => str.replace(/-/g, ' ').replace(/\s+/g, ' ').toLowerCase().trim();
       const match = allTeams.find(t => normalize(t.teamName) === normalize(slug));
       if (match) {
         await selectTeam(match._id);
