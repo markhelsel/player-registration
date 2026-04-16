@@ -974,6 +974,19 @@
     <div class="card">
       <div class="section-heading">Player Info</div>
 
+      <!-- Fee (always visible) -->
+      <div id="fee-display" style="margin-bottom:.3rem">
+      <div class="field">
+        <label>Player Fee Amount</label>
+        <div class="fee-box fee-box--empty fee-placeholder" id="fee-box" style="margin-top:.2rem">
+          <div>
+            <div class="fee-box-label" id="fee-label">Loading fee…</div>
+            <div class="fee-box-amount" id="fee-amount" style="font-size:1rem;opacity:.4;font-weight:400;letter-spacing:0">—</div>
+          </div>
+          <div class="fee-box-type" id="fee-type-badge" style="opacity:.3">—</div>
+        </div>
+      </div>
+      </div>
 
       <div class="field">
         <label>Player DOB <span class="req">★</span></label>
@@ -1084,19 +1097,6 @@
         <input type="text" id="high-school" placeholder="School name">
       </div>
 
-      <!-- Fee (always visible) -->
-      <div id="fee-display" style="margin-bottom:.3rem">
-      <div class="field">
-        <label>Player Fee Amount</label>
-        <div class="fee-box fee-box--empty fee-placeholder" id="fee-box" style="margin-top:.2rem">
-          <div>
-            <div class="fee-box-label" id="fee-label">Loading fee…</div>
-            <div class="fee-box-amount" id="fee-amount" style="font-size:1rem;opacity:.4;font-weight:400;letter-spacing:0">—</div>
-          </div>
-          <div class="fee-box-type" id="fee-type-badge" style="opacity:.3">—</div>
-        </div>
-      </div>
-      </div>
     </div>
 
     <div class="err-msg" id="err-2"></div>
