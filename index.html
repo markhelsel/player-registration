@@ -1140,6 +1140,16 @@
     </div>
   </div>
 
+
+  <!-- ══ THANK YOU (shown when any acknowledgement is answered "No") ══ -->
+  <div class="page" id="page-thankyou">
+    <div class="success-screen" style="display:block">
+      <span class="success-icon">🙏</span>
+      <h2>Thank You</h2>
+      <p>Please Contact Your Coach on This Matter</p>
+    </div>
+  </div>
+
 </div><!-- /main -->
 
 </div><!-- /page-wrap -->
@@ -1315,6 +1325,23 @@ function goToPage2() {
   if (invalid) {
     return showErr('err-1', 'Please complete all required fields marked with ★ before continuing.');
   }
+
+  // Check acknowledgements — all 3 must be answered; any "No" shows thank-you screen
+  const ackNames = ['ack1', 'ack2', 'ack3'];
+  for (const name of ackNames) {
+    const checked = document.querySelector(`input[name="${name}"]:checked`);
+    if (!checked) {
+      return showErr('err-1', 'Please answer all acknowledgements before continuing.');
+    }
+    if (checked.value === 'no') {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById('page-thankyou').classList.add('active');
+      document.querySelector('.steps-wrap').style.display = 'none';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+  }
+
   setPage(2);
 }
 
